@@ -4,7 +4,7 @@
 2. Класс будет принимать два параметра - название продукта (name) и его стоимость (price)
 3. Класс будет содержать метод
 ```
-  def print_label():
+  def print_label(self):
     print(f"Продукт {self.name} цена {self.price}")
 ```
 5. Создать класс Pizza - дочерний от Product
