@@ -36,15 +36,34 @@ git remote add origin https://github.com/Coopteh/IS221.git
 6. Пройдитесь циклом по элементам списка и вызовите метод speak для каждого из объектов (элементов списка)
 
 ## С. Работа с git-ом - фиксируем изменения и передаем на удаленный репозиторий
-Если программа успешно работает - передайте код на удаленные репозиторий
-   - добавьте файл (в Git Bash) в репозиторий
-     git add .
-   - закоммитьте изменения
-     git commit -m "Added new file"
-   - создадим новую ветку и переключимся на нее
-     git checkout -b branch-220124-comp<N>
-     (где N - номер вашего компа)
-   - git push --set-upstream origin branch-220124-comp<N>
+Если программа успешно работает - передайте код на удаленные репозиторий  
+   - добавьте файл (в Git Bash) в репозиторий  
+     `git add .`  
+   - закоммитьте изменения  
+     `git commit -m "Added new file"`  
+   - создадим новую ветку и переключимся на нее  
+     `git checkout -b branch-220124-comp<N>`  
+     (где N - номер вашего компа)  
+   - `git push --set-upstream origin branch-220124-comp<N>`  
+
+## D. Паттерн фабричный метод
+```
+from animal import Dog,Cat,Cow
+class Fabrica:
+    def create(self,type):
+        if type == "Dog":
+            return Dog("Собака")
+        if type == "Cat":
+            return Cat("Кошка")
+        if type== "Cow":
+            return Cow("Корова")
+fab = Fabrica()
+list_animals= [fab.create("Dog"),fab.create("Cat"), fab.create("Cow")]
+
+for animal in list_animals:
+    animal.speak()
+```
+   
   
 
    
