@@ -14,8 +14,28 @@
 - Полиномиальные функции O(n^k) для некоторой константы k.
 - Экспоненциальные функции O(2^n) 
 - Факториальные функции O(n!)  
-```
 
+Пример расчета среднего для функции sumk(k)  
+```
+import time
+
+def sumk(k):
+    start = time.time()
+    total = 0
+    for i in range(k + 1):
+        total = total + i
+    end = time.time()
+    return total, end - start
+
+def timetrials(func, k, trials=10):
+    totaltime = 0
+    for i in range(trials):
+        totaltime += func(k)[1]
+    print("average =%10.7f for k = %d" % (totaltime / trials, k))
+
+timetrials(sumk, 10000)
+timetrials(sumk, 100000)
+timetrials(sumk, 1000000)
 ```
 ## Задача
 Есть функция f003(L), где L - число
