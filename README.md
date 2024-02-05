@@ -40,10 +40,21 @@ list3.reverse()
 3) убедитесь что скорость вычисления O(n2)
 4) Создайте класс Bubble которому передается список arr в инициализатор
 ```
-    class Buuble:
+    class Bubble:
         def __init__(self, arr):
+            self.arr = arr
 ```
-и есть метод  bubble_sort() сортирующий переданный список
+и есть метод  sort() сортирующий переданный список
 ```
-        def bubble_sort(self):
+        def sort(self):
+            return ' '.join( map(str, self.arr) )
+```
+
+### Задание (2 пара)
+1. Содайте модульный тест в папке test - файл bubble_test.py  
+`выделить папку test - вызвать контекстное меню, пункт New \ Python unit test`
+
+3. Создайте для класса Bubble метод представления объекта в виде строки
+```
+        def __str__(self):
 ```
