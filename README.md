@@ -47,7 +47,6 @@ list3.reverse()
 и есть метод  sort() сортирующий переданный список
 ```
         def sort(self):
-            return ' '.join( map(str, self.arr) )
 ```
 
 ### Задание (2 пара)
@@ -57,6 +56,7 @@ list3.reverse()
 2. Создайте для класса Bubble метод представления объекта в виде строки
 ```
         def __str__(self):
+            return ' '.join( map(str, self.arr) )
 ```
 
 3. Создайте юнит тест для следующих списков
