@@ -30,7 +30,7 @@ print("Время выполнения составило: ", total)
 ```
 2) Проведите серию из 3 экспериментов для массивов из 10, 100, 1000 элементов
 ```
-list1 = list(range(100))
+list1 = list(range(10))
 list1.reverse()
 list2 = list(range(100))
 list2.reverse()
