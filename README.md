@@ -1,5 +1,8 @@
 ## Задача 2
 - Откройте Visual Studio Code
+- поставьте галочку автосохранения - меню File \ Auto save
+- поставьте расширение Live Server - для этого зайдите во вкладу Extension
+и наберите в строке поиска `Live Server` и нажмите Install
 - откройте папку Документы - File \ Open folder
 - создайте файл lermontov.html
 - наберите `!<TAB>`
