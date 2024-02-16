@@ -1,4 +1,4 @@
-## Задача 1
+## Задача 2
 - Откройте Visual Studio Code
 - откройте папку Документы - File \ Open folder
 - создайте файл lermontov.html
