@@ -4,17 +4,25 @@
 
 На занятии мы научились получать данные с [API](https://jsfree-les-3-api.onrender.com/characters)  
 и используя полученные данные оживили статичную верстку.  
-В рамках домашней работы вам нужно повторить аналогичные операции.
+Вам нужно повторить аналогичные операции.
 
 ```
 Вся работа будет происходить в файле index.js
 
 Внутри function fetchCharacters() {} реализуйте получение данных с API, используя Fetch
+  function fetchCharacters() {
+      let url= "https://jsfree-les-3-api.onrender.com/characters";
+      return fetch(url).then( res => res.json() );
+  }
+
 Внутри function getCharacterCards(characters) {} реализуйте формирование массива карточек персонажей
-
-получить одну карточку можно вызвав getCharacterCard(character)
-
-Внутри function getCharacterModals (characters) {} реализуйте формирование массива модульных окон персонажей
-
-получить одно модальное окно можно вызвав getCharacterModal(character)
+  function getCharacterCards(characters) {
+      let arr= [];
+      for(let i=0; i < characters.length; i++) {
+        let character = characters[i];
+        let card = getCharacterCard(character);
+        arr.push( card );
+      }
+      return arr;
+  }
 ```
