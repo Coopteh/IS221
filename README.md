@@ -1,27 +1,31 @@
 ### Задача 1. Обработка GET запроса
 
-1. Откройте Visual Studio, откройте папку `Документы`
-# import main Flask class and request object
+1. Откройте pyCharm
+2. Создайте файл `get_name.py`
+```
 from flask import Flask, request
 
 # create the Flask app
 app = Flask(__name__)
 
-@app.route('/query-example')
+@app.route('/query')
 def query_example():
-    return 'Query String Example'
-
-@app.route('/form-example')
-def form_example():
-    return 'Form Data Example'
-
-@app.route('/json-example')
-def json_example():
-    return 'JSON Object Example'
+    name = request.args.get('name')
+    count = request.args.get('count')
+    return f"Привет, {name}!"
 
 if __name__ == '__main__':
     # run app in debug mode on port 5000
     app.run(debug=True, port=5000)
+```
+- Заставьте скрипт запускаться и обрабатывать данные по запросу в браузере
+`http://127.0.0.1:5000/query?name=Ivan&count=5`  
+- В зависимости от значения параметра count - добавляйте нужное количество восклицательных знаков `!`
+```
+0 - нет восклицательных - Привет, Иван
+1 - 1 восклицательный - Привет, Иван!
+5 - 5 восклицательных - Привет, Иван!!!!!
+```
     
 ### Задание 2. - Создание и обработка HTML формы (POST запрос)
 
