@@ -2,6 +2,7 @@
 
 1. Откройте pyCharm
 2. Создайте файл `get_name.py`
+3. Установите компонент `Flask` - меню `File \ Settings \ Project:<название проекта> \ Python Interpreter \ Flask -> install`
 ```
 from flask import Flask, request
 
