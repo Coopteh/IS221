@@ -38,7 +38,7 @@ if __name__ == '__main__':
 1. Откройте pyCharm, откройте папку проекта
 2. Создайте подпапку `templates`
 3. Создайте файл `feedback.html` внутри этой папки, используя эммет `!` задайте html-структуру 
-4. Создайте HTML форму `<form action="feedback.py" method="POST">` на веб-странице, содержащую следующие элементы:
+4. Внутри html-файла создайте HTML форму `<form action="feedback.py" method="POST">` на веб-странице, содержащую следующие элементы:
 ```
    - <input type="text" name="fio" id="id-fio"> для ввода ФИО или просто имени, c подписью <label for="id-fio">Ваше ФИО</label>.
    - <input type="email" name="email" id="id-email"> для ввода электронной почты, c подписью <label for="id-email">Email</label>.
@@ -54,27 +54,26 @@ if __name__ == '__main__':
 def get_feedback():
     return render_template('feedback.html')
 ```  
-6. Напишите простой серверный скрипт (feedback.py) на python flask для обработки данных формы.
+6. Напишите метод в `get_name.py` для обработки данных формы.
 Серверный скрипт должен получить данные, отправленные из формы и вывести их на страницу.
 ```
-from flask import Flask, request
-
-app = Flask(__name__)
-
-@app.route('/feedback.py', methods = ['POST'])
-def do_form:
+@app.route('/feedback', methods=['POST'])
+def do_form():
     if request.method == 'POST':
-        choices = request.form.get('choices')
+        fio = request.form.get('fio')
+        email = request.form.get('email')
+        message = request.form.get('message')
+        category = request.form.get('category')
         return f'''
-        {choises}
+        Спасибо за ваше обращение!<br>
+        <br>
+        Ваше ФИО: {fio}<br>
+        Емайл: {email}<br>
+        <br>
+        Сообщение: {message}<br>
+        <br>
+        Категория сообщения: {category}<br>
         '''
-    else:
-        # POST Error 405 Method Not Allowed
-
-
-if __name__ == '__main__':
-    # run app in debug mode on port5000
-    app.run(debug=True, port=5000)
 ```
 7. Отправьте данные через созданную форму, чтобы убедиться, что обработчик на сервере
 корректно работает и может обрабатывать введенные данные.  
