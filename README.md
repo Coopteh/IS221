@@ -40,10 +40,11 @@ if __name__ == '__main__':
 3. Создайте HTML форму `<form action="feedback.py" method="POST">` на веб-странице, содержащую следующие элементы:
 ```
    - <input type="text" name="fio" id="id-fio"> для ввода ФИО или просто имени, c подписью <label for="id-fio">Ваше ФИО</label>.
-   - <input type="email" name="fio" id="id-email"> для ввода электронной почты, c подписью <label for="id-email">Email</label>.
-   - <textarea name="message"></textarea> для ввода сообщения.
+   - <input type="email" name="email" id="id-email"> для ввода электронной почты, c подписью <label for="id-email">Email</label>.
+   - <textarea name="message" id="id-message"></textarea> для ввода сообщения, c подписью <label for="id-message">Текст сообщения</label><br>
    - <select name="category" id="id-category"> с несколькими опциями
         (`<option value="вопрос">Вопрос</option>` и т.д.) для выбора категории (Вопрос, Отзыв, Проблема).
+   и подписью <label for="id-category">Категория обращения</label><br>
    - Кнопка `<button type='submit'>Отправить</button>` для отправки формы.
 ```
 4. Напишите простой серверный скрипт (feedback.py) на python flask для обработки данных формы.
