@@ -35,17 +35,18 @@ if __name__ == '__main__':
 Вы создадите простую HTML форму на веб-странице и напишите обработчик на сервере  
 для получения и дальнейшей обработки данных, введенных пользователем в форму.
 
-1. Откройте Visual Studio, откройте папку `Документы`
-2. Создайте файл feedback.html, используя эммет `!` задайте html-структуру 
+1. Откройте pyCharm, откройте папку `Документы`
+2. Создайте файл `feedback.html`, используя эммет `!` задайте html-структуру 
 3. Создайте HTML форму на веб-странице, содержащую следующие элементы:
 ```
-   - <input type="text"> для ввода имени.
-   - <input type="email"> для ввода электронной почты.
-   - <textarea> для ввода сообщения.
-   - <select> с несколькими опциями (`<option>`)для выбора категории (Вопрос, Отзыв, Проблема).
-   - Кнопка `<button type='submit'>` для отправки формы.
+   - <input type="text" name="fio" id="id-fio"> для ввода ФИО или просто имени, c подписью <label for="id-fio">Ваше ФИО</label>.
+   - <input type="email" name="fio" id="id-email"> для ввода электронной почты, c подписью <label for="id-email">Email</label>.
+   - <textarea name="message"></textarea> для ввода сообщения.
+   - <select name="category" id="id-category"> с несколькими опциями
+        (`<option value="вопрос">Вопрос</option>` и т.д.) для выбора категории (Вопрос, Отзыв, Проблема).
+   - Кнопка `<button type='submit'>Отправить</button>` для отправки формы.
 ```
-4. Напишите простой серверный скрипт (feedback.py) на PHP для обработки данных формы.
+4. Напишите простой серверный скрипт (feedback.py) на python flask для обработки данных формы.
 Серверный скрипт должен получить данные, отправленные из формы и вывести их на страницу.
 ```
 from flask import Flask, request
@@ -56,15 +57,21 @@ app = Flask(__name__)
 def do_form:
     if request.method == 'POST':
         choices = request.form.get('choices')
+        return f'''
+        {choises}
+        '''
     else:
         # POST Error 405 Method Not Allowed
 
+
+if __name__ == '__main__':
+    # run app in debug mode on port5000
+    app.run(debug=True, port=5000)
 ```
 6. Отправьте данные через созданную форму, чтобы убедиться, что обработчик на сервере
 корректно работает и может обрабатывать введенные данные.  
 
-Запустите `Xamp Control \ Apache start` -> в браузере вызовите `localhost/feedback.php`
-
+В браузере вызовите `127.0.0.1:5000/feedback.html`
 <hr>
    
 ### Задание 3. - Переключатели
