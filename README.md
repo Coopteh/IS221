@@ -48,8 +48,10 @@ if __name__ == '__main__':
    и подписью <label for="id-category">Категория обращения</label><br>
    - Кнопка `<button type='submit'>Отправить</button>` для отправки формы.
 ```
-5. Добавьте в файл `get_name.py` новый маршрут для вызова нашей формы
+5. Добавьте в файл `get_name.py` новый импорт и новый маршрут для вызова нашей формы
 ```
+from flask import Flask, request, render_template
+
 @app.route('/')
 def get_feedback():
     return render_template('feedback.html')
