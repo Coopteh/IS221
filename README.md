@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 1. Откройте pyCharm, откройте папку `Документы`
 2. Создайте файл `feedback.html`, используя эммет `!` задайте html-структуру 
-3. Создайте HTML форму на веб-странице, содержащую следующие элементы:
+3. Создайте HTML форму `<form action="feedback.py" method="POST">` на веб-странице, содержащую следующие элементы:
 ```
    - <input type="text" name="fio" id="id-fio"> для ввода ФИО или просто имени, c подписью <label for="id-fio">Ваше ФИО</label>.
    - <input type="email" name="fio" id="id-email"> для ввода электронной почты, c подписью <label for="id-email">Email</label>.
