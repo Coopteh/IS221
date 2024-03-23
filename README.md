@@ -28,7 +28,7 @@ bootstrap.min.css  -  в новую папку css (создайте папку 
 	</div>
 </div>
 ```
-8. Внутрь блока добавьте html-код формы из документации (`Docs \ Forms \ Form controls \ Example`)
+8. Внутрь блока добавьте html-код формы из документации [https://getbootstrap.com/](https://getbootstrap.com/) (`Docs \ Forms \ Form controls \ Example`)
 11. Откройте в браузере через `Go Live` - форма должна отображаться в стилях Bootstrap!
 <hr>
 
