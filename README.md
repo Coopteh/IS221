@@ -10,7 +10,7 @@ Bootstrap — свободный набор инструментов для со
 Шаги выполнения:
 1. Создайте в Проводнике в папке `Документы` новую папку `cafe`
 2. Откройте в Visual Studio Code папку `Документы\cafe`
-3. Создайте файл `index.html`  
+3. Создайте файл `index.html` и через `!<tab>` задайте структуру html-страницы
 4. Откройте в браузере ссылку [https://getbootstrap.com/](https://getbootstrap.com/)
 5. Найдите в меню `Docs \ Download \ Source files \ Download sources` - скачайте архив
 6. Найдите в нем папку `dist` и скопируйте файлы:
@@ -34,17 +34,19 @@ bootstrap.min.css  -  в новую папку css (создайте папку 
 
 ### Задание 2 - Добавление карусели изображений
 
-1. На сайте Bootstrap  [https://getbootstrap.com/](https://getbootstrap.com/) зайдите в раздел `Docs \ Components \ Carousel \ Basic examples`
-2. Скопируйте код карусели и вставьте над формой
-3. Найдите 3 картинки пиццы и сохраните их в папку `img` (создайте папку внутри `Документы\cafe`)
-4. Исправьте в html-коде карусели атрибуты `src` тегов `img`, чтобы они указывали на нужные картинки (пример <img src="./img/image1.png">)
-5. Проверьте работу карусели изображений - в браузере через `Go Live`
+1. Откройте в Visual Studio Code папку `Документы\cafe`
+2. На сайте Bootstrap  [https://getbootstrap.com/](https://getbootstrap.com/) зайдите в раздел `Docs \ Components \ Carousel \ Basic examples`
+3. Скопируйте код карусели и вставьте над формой
+4. Найдите 3 картинки пиццы и сохраните их в папку `img` (создайте папку внутри `Документы\cafe`)
+5. Исправьте в html-коде карусели атрибуты `src` тегов `img`, чтобы они указывали на нужные картинки (пример <img src="./img/image1.png">)
+6. Проверьте работу карусели изображений - в браузере через `Go Live`
 <hr>
 
 ### Задание 3 - Добавление навигационной панели
 
-1. На сайте Bootstrap  [https://getbootstrap.com/](https://getbootstrap.com/) зайдите в раздел `Docs \ Components \ Navbar`
-2. Скопируйте код навигационной панели без кнопок и форм
+1. Откройте в Visual Studio Code папку `Документы\cafe`
+2. На сайте Bootstrap  [https://getbootstrap.com/](https://getbootstrap.com/) зайдите в раздел `Docs \ Components \ Navbar`
+3. Скопируйте код навигационной панели без кнопок и форм
 ```
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -63,14 +65,14 @@ bootstrap.min.css  -  в новую папку css (создайте папку 
   </div>
 </nav>
 ```
-6. Создайте меню с пунктами "Главная", "Каталог", "Сделать заказ"
-7. Измените ссылки "Каталог" на "/products/", а "Сделать заказ" на "/orders/"
-8. Измените название бренда (<a class="navbar-brand") - вместо `Navbar` на `BURGER KRIG`
+6. Создайте меню с пунктами "Главная", "Каталог", "Сделать заказ", "Для персонала" (disabled)
+7. Измените ссылку `Каталог` c `#` на `./products.html`
+8. Измените название бренда (<a class="navbar-brand") - вместо `Navbar` на `ПИЦЦА ИС-221`
 <hr>
 
 ### Задание 4 - Каталог продукции
 
-1. Откройте в Visual Studio Code папку `c:\xamp\htdocs`
+1. Откройте в Visual Studio Code папку `Документы\cafe`
 2. Создайте новый файл `products.html`, через `!<tab>` задайте структуру html-страницы
 3. Добавьте на страницу Bootstrap css (тег link) из файла `index.html`
 4. В секцию body добавьте блок `<div class="container">`
