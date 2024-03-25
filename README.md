@@ -49,7 +49,7 @@ bootstrap.min.css  -  в новую папку css (создайте папку 
 
 1. Откройте в Visual Studio Code папку `Документы\cafe`
 2. На сайте Bootstrap  [https://getbootstrap.com/](https://getbootstrap.com/) зайдите в раздел `Docs \ Components \ Navbar`
-3. Скопируйте код навигационной панели без кнопок и форм
+3. Скопируйте код навигационной панели без кнопок и форм, вставьте над каруселью с изображениями 
 ```
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -70,7 +70,7 @@ bootstrap.min.css  -  в новую папку css (создайте папку 
 ```
 6. Создайте меню с пунктами "Главная", "Каталог", "Сделать заказ", "Для персонала" (disabled)
 7. Измените ссылку `Каталог` c `#` на `./products.html`
-8. Измените название бренда (<a class="navbar-brand") - вместо `Navbar` на `ПИЦЦА ИС-221`
+8. Измените название бренда (<a class="navbar-brand") - вместо `Navbar` на `ПИЦЦА ИС-221`, а ссылку с `#` на `index.html`
 <hr>
 
 ### Задание 4 - Каталог продукции
