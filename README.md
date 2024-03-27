@@ -5,6 +5,26 @@
 ссылка `URL = https://jsfree-les-3-api.onrender.com/characters`
 2. формируют и добавляют на страницу карточки с названием персонажа и его картинкой
 
+Выполнение:
+1. В Visual Studio Code создайте и откройте новую папку `Документы \ marvel-api`
+2. В пустой папке `marvel-api` создайте html-страницу 'index.html'
+3. Через эммет `!+tab` задайте базовую структуру
+4. Добавьте тaблицу стилей bootstrap в секцию `head`
+```
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+          crossorigin="anonymous"
+    >
+```
+5. Добавьте заголовок `Персонажи Marvel` в секцию `head`
+6. Добавьте скрипты bootstrap в конец секции `body`
+```
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"
+></script>
+```
 
 
 
