@@ -1,4 +1,4 @@
-### Задача "Интеграция с API-Marvel"
+### Задача 1. "Интеграция с API-Marvel"
 
 Необходимо написать пару скриптов, которые:
 1. получают данные в json-формате с сайта marvel.com  
@@ -77,34 +77,62 @@ async function start() {
 ​​0: Object { id: 1009610, name: "Человек-паук", nameor: "Spider-Man", … }
 ...
 ```
+<hr>
 
+### Задача 2. Добавление карточек с разметкой
 
+У нас есть карточки из картинки и описания - с готовой версткой, использующей стили bootstrap!
 
-
-
-Используйте сайт [replit.com](https://replit.com/@vmilevskiy/jsfree-les-3-start-template#index.html)
-
-На занятии мы научились получать данные с [API](https://jsfree-les-3-api.onrender.com/characters)  
-и используя полученные данные оживили статичную верстку.  
-Вам нужно повторить аналогичные операции.
-
+Добавьте в `index.js` новые функцию
 ```
-Вся работа будет происходить в файле index.js
-
-Внутри function fetchCharacters() {} реализуйте получение данных с API, используя Fetch
-  function fetchCharacters() {
-      let url= "https://jsfree-les-3-api.onrender.com/characters";
-      return fetch(url).then( res => res.json() );
-  }
-
-Внутри function getCharacterCards(characters) {} реализуйте формирование массива карточек персонажей
-  function getCharacterCards(characters) {
-      let arr= [];
-      for(let i=0; i < characters.length; i++) {
-        let character = characters[i];
-        let card = getCharacterCard(character);
-        arr.push( card );
-      }
-      return arr;
-  }
+/**
+ * Получить массив сформированных карточек персонажей
+ *
+ * @param jsonData
+ * @returns {Array}
+ */
+function getCharacterCards(jsonData) {
+    let arrCards=[];
+    for(let i=0;  i< jsonData.length; i++) {
+        let data = jsonData[i];
+        let card = getCharacterCard(data);
+        arrCards.push(card);
+    }
+    return arrCards;
+}
 ```
+`getCharacterCards(characters)`  - по переданному массиву с данными (jsonData)   
+в цикле, формируется другой массив (arrCards) из сверстанных в html-разметку карточек персонажей  
+
+/**
+ * Получить заполненную разметку карточки персонажа
+ *
+ * @param character
+ * @returns {string}
+ */
+function getCharacterCard(character) {
+    return `
+        <div class="card mb-3 col-sm-12 col-md-6 col-lg-4">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img src="${character.thumbnail}"
+                         style="max-width: 100%;"
+                         alt="${character.name}"
+                    >
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${character.name}</h5>
+                        <p>${character.description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+}
+```
+
+### Задача 2. Персонажи Rick and Morty
+
+Измените `url` на [API персонажей безумного мультсериала Rick and Morty](https://rickandmortyapi.com/api/character)
+`url= "https://rickandmortyapi.com/api/character";`
