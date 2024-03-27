@@ -139,12 +139,20 @@ function getCharacterCard(data) {
 
 3. Добавьте в `start.js` еще пару строк
 ```
-
+let cardBox = document.querySelector('#character-card-box');
+cardBox.innerHTML = getCharacterCards(data).join('');
 ```
-<hr>
 
+Чтобы увидеть результат:
+- запустите `Go Live` для страницы `index.html`  
+<hr>
 
 ### Задача 3. Персонажи Rick and Morty
 
-Измените `url` на [API персонажей безумного мультсериала Rick and Morty](https://rickandmortyapi.com/api/character)
+1. Измените `url` на [API персонажей безумного мультсериала Rick and Morty](https://rickandmortyapi.com/api/character)
 `url= "https://rickandmortyapi.com/api/character";`
+2. Измените везде в `index.html` вместо `Marvel` запишите `Rick and Morty`
+3. Найдите как добраться до нужных данных, для этого: 
+- запустите `Go Live` для страницы `index.html`  
+- нажмите `F12` (Панель разработчика) и откройте вкладку "Консоль"  
+  
