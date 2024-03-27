@@ -1,4 +1,17 @@
-### Задача "Разработка сайта"
+### Задача "Интеграция с API-Marvel"
+
+Необходимо написать пару скриптом, которые:
+1. получают данные в json-формате с сайта marvel.com  
+ссылка `URL = https://jsfree-les-3-api.onrender.com/characters`
+2. формируют и добавляют на страницу карточки с названием персонажа и его картинкой
+
+
+
+
+
+
+
+
 
 Используйте сайт [replit.com](https://replit.com/@vmilevskiy/jsfree-les-3-start-template#index.html)
 
