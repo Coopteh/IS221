@@ -83,7 +83,7 @@ async function start() {
 
 У нас есть карточки из картинки и описания - с готовой версткой, использующей стили bootstrap!
 
-Добавьте в `index.js` новые функцию
+1. Добавьте в `index.js` новую функцию
 ```
 /**
  * Получить массив сформированных карточек персонажей
@@ -104,26 +104,28 @@ function getCharacterCards(jsonData) {
 `getCharacterCards(characters)`  - по переданному массиву с данными (jsonData)   
 в цикле, формируется другой массив (arrCards) из сверстанных в html-разметку карточек персонажей  
 
+2. Добавьте в `index.js` еще одну функцию
+```
 /**
  * Получить заполненную разметку карточки персонажа
  *
- * @param character
+ * @param data
  * @returns {string}
  */
-function getCharacterCard(character) {
+function getCharacterCard(data) {
     return `
         <div class="card mb-3 col-sm-12 col-md-6 col-lg-4">
             <div class="row g-0">
                 <div class="col-4">
-                    <img src="${character.thumbnail}"
+                    <img src="${data.thumbnail}"
                          style="max-width: 100%;"
-                         alt="${character.name}"
+                         alt="${data.name}"
                     >
                 </div>
                 <div class="col-8">
                     <div class="card-body">
-                        <h5 class="card-title">${character.name}</h5>
-                        <p>${character.description}</p>
+                        <h5 class="card-title">${data.name}</h5>
+                        <p>${data.description}</p>
                     </div>
                 </div>
             </div>
@@ -131,8 +133,18 @@ function getCharacterCard(character) {
         `;
 }
 ```
+Это готовая разметка на bootstrap-стилях, в которую вставляются данные  
+шаблонированным способом вида: `${data.name}`, здесь `$` обозначает переменную, а внутри скобок `{}` указывается ее название  
+для отображения картинки используется знакомый вам тег `<img>`, для названия персонажа - тег заголовка `<h5>`
 
-### Задача 2. Персонажи Rick and Morty
+3. Добавьте в `start.js` еще пару строк
+```
+
+```
+<hr>
+
+
+### Задача 3. Персонажи Rick and Morty
 
 Измените `url` на [API персонажей безумного мультсериала Rick and Morty](https://rickandmortyapi.com/api/character)
 `url= "https://rickandmortyapi.com/api/character";`
