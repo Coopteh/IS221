@@ -25,6 +25,19 @@
         crossorigin="anonymous"
 ></script>
 ```
+7. После скрипта добавьте скрипты:
+```
+<script src="index.js"></script>
+<script src="start.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        start();
+    });
+</script>
+```
+все используемые js функции находятся в файле `index.js`  
+управляющая функция `start()` находится в файле `start.js`  
+9. 
 
 
 
