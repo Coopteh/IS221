@@ -83,7 +83,21 @@ async function start() {
 
 У нас есть карточки из картинки и описания - с готовой версткой, использующей стили bootstrap!
 
-1. Добавьте в `index.js` новую функцию
+1. Добавьте в секцию `body` (перед скриптами)
+```
+<div class="container">
+    <h1 class="pt-3 pb-3">Персонажи Rick and Morty</h1>
+
+    <div class="row" id="character-card-box">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-danger center" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>
+```
+2. Добавьте в `index.js` новую функцию
 ```
 /**
  * Получить массив сформированных карточек персонажей
@@ -104,7 +118,7 @@ function getCharacterCards(jsonData) {
 `getCharacterCards(characters)`  - по переданному массиву с данными (jsonData)   
 в цикле, формируется другой массив (arrCards) из сверстанных в html-разметку карточек персонажей  
 
-2. Добавьте в `index.js` еще одну функцию
+3. Добавьте в `index.js` еще одну функцию
 ```
 /**
  * Получить заполненную разметку карточки персонажа
@@ -137,7 +151,7 @@ function getCharacterCard(data) {
 шаблонированным способом вида: `${data.name}`, здесь `$` обозначает переменную, а внутри скобок `{}` указывается ее название  
 для отображения картинки используется знакомый вам тег `<img>`, для названия персонажа - тег заголовка `<h5>`
 
-3. Добавьте в `start.js` еще пару строк
+4. Добавьте в `start.js` еще пару строк
 ```
 let cardBox = document.querySelector('#character-card-box');
 cardBox.innerHTML = getCharacterCards(data).join('');
