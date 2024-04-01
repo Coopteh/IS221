@@ -28,4 +28,29 @@
         <button onclick="translate_joke(data);">Перевести шутку</button>
     </div>
 ```
-5. 
+5. В файле `start.js` создайте функцию
+```
+var data;
+
+async function start_joke() {
+    url= "https://official-joke-api.appspot.com/random_joke";
+    data = await fetchData(url);
+    console.log(data);
+
+    let cardBox = document.querySelector('#character-card-box');
+    cardBox.innerHTML = getCharacterCardJoke(data);
+}
+```
+5. В файле `index.js` создайте функцию `getCharacterCardJoke(data)`
+- скопируйте `getCharacterCard(data)`, измените разметку и шаблонированный вывод переменных
+
+6. В файле `index.js` создайте функцию `translate_joke(data)`
+```
+function translate_joke(data)
+{
+    url = `https://translate.google.com/?sl=en&tl=ru&text=Question: ???, Answer: ???&op=translate&hl=ru`;
+    window.location.href = url; 
+}
+```
+вместо вопросов добавьте нужные поля
+7. Проверьте работу программы, посмейтесь над удачными шутками))
