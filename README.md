@@ -36,7 +36,9 @@ branch_img = pygame.image.load('branch.png')
 x = 30
 y = 30
 speed = 5
- 
+branch_x = screen_width // 2 - 50
+branch_y = screen_height - 100
+
 # Основной цикл программы
 running = True
 while running:
@@ -44,7 +46,7 @@ while running:
  
     # Отображение птички и веточки
     screen.blit(bird_img, (x, y))
-    screen.blit(branch_img, (screen_width // 2 - 50, screen_height - 100))
+    screen.blit(branch_img, (branch_x, branch_y))
  
     pygame.display.flip()  # Обновление экрана
  
@@ -68,4 +70,10 @@ while running:
 # Завершение работы Pygame
 pygame.quit()
 ```
-Доведите птичку до веточки.
+5. Доведите птичку до веточки.
+6. Сделайте выход из игры (`running = False`) при достижении веточки или выполнения условия:
+```
+    if branch_y-24 < y < branch_y+24 and branch_x-24 < x < branch_x+24:
+        running = False
+```
+
