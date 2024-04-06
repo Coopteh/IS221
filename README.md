@@ -25,9 +25,29 @@ qa_dict = {}
 
 with open('qa.txt', 'r', encoding='utf-8') as file:
     lines = file.readlines()
-    qa_dict['вопрос'] = lines[0].strip()
+    qa_dict['question'] = lines[0].strip()
     num_answers = int(lines[1])
-    qa_dict['ответ'] = [line.strip() for line in lines[2:2+num_answers]]
+    qa_dict['answers'] = [line.strip() for line in lines[2:2+num_answers]]
 
 print(qa_dict)
+```
+<hr>
+
+### Задание 2. Добавим веб-страницу
+1. Используем Flask - добавьте первой строчкой
+```
+from flask import Flask, request, render_template
+```
+2. Запуск веб-сервера
+```
+# create the Flask app
+app = Flask(__name__)
+
+@app.route('/')
+def get_qa():
+    return qa_dict['question']
+
+if __name__ == '__main__':
+    # run app in debug mode on port 5000
+    app.run(debug=False, port=5000)
 ```
