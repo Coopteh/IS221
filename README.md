@@ -25,9 +25,10 @@ qa_dict = {}
 
 with open('qa.txt', 'r', encoding='utf-8') as file:
     lines = file.readlines()
-    qa_dict['question'] = lines[0].strip()
-    num_answers = int(lines[1])
-    qa_dict['answers'] = [line.strip() for line in lines[2:2+num_answers]]
+
+qa_dict['question'] = lines[0].strip()
+num_answers = int(lines[1])
+qa_dict['answers'] = [line.strip() for line in lines[2:2+num_answers]]
 
 print(qa_dict)
 ```
