@@ -69,8 +69,15 @@ if __name__ == '__main__':
 ```
 Введите номер правильного ответа:  4
 | Отправить |
+
+<form action="/result" method="POST">..</form>
 ```
 2. Обработайте данные ответа - выдайте на экран браузера:  
 `Это правильный ответ!` - в случае правильного ответа  
 `Неверный ответ` - в случае неправильного ответа  
-2. 
+```
+@app.route('/result', methods=['POST'])
+def check_result():
+    if request.method == 'POST':
+        num = int(request.form.get('result'))
+```
