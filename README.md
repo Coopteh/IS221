@@ -72,12 +72,23 @@ if __name__ == '__main__':
 
 <form action="/result" method="POST">..</form>
 ```
-2. Обработайте данные ответа - выдайте на экран браузера:  
+2. Переместите `list_answers` в начало кода (после `print`) и сделайте копирование  
+`list_answers = qa_dict['answers'].copy()` 
+4. Обработайте данные ответа - выдайте на экран браузера:  
 `Это правильный ответ!` - в случае правильного ответа  
 `Неверный ответ` - в случае неправильного ответа  
 ```
 @app.route('/result', methods=['POST'])
 def check_result():
+@app.route('/result', methods=['POST'])
+def check_result():
     if request.method == 'POST':
         num = int(request.form.get('result'))
+        choise = list_answers[num-1]
+        qa_1 = qa_dict['answers'][0]
+        if (choise == qa_1):
+            return "<center><h2>Это правильный ответ!</h2></center>"
+        else:
+            return "<center><h2>Неверный ответ..</h2></center>"
+    return "Error"
 ```
