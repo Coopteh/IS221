@@ -1,4 +1,4 @@
-# Задача 1. Игра "Посади птичку на ветку"
+### Задача 1. Игра "Посади птичку на ветку"
 
 Создать простую игру "Посади птичку на ветку" на python, с использованием библиотеки pygame.  
 
@@ -79,3 +79,14 @@ pygame.quit()
         running = False
 ```
 
+### Задание 2 - Посадка ракеты на луну!
+
+Изменим спрайты, определим событие пересечения спрайтов и выведем сообщение об успешной посадке.  
+1. Скачайте спрайты
+```
+# Загрузка спрайтов птички и веточки
+rocket_img = pygame.image.load('images/rocket.png')
+moon_img = pygame.image.load('images/moon.png')
+myfont = pygame.font.Font('fonts/Roboto-Black.ttf', 40)
+text_surface = myfont.render('You win!', False,'Red')
+```
