@@ -85,10 +85,12 @@ pygame.quit()
 1. Скачайте спрайты ракеты и луны с сайта [flaticon.com](https://www.flaticon.com/)  или [iconfinder.com](https://www.iconfinder.com/)
 2. Сохраните изображение ракеты в папку `images` используя редактор `Gimp` (меню `Изображение \ Размер изображения` и измените размеры на `128 x 128`, название `rocket.png`)
 3. Сохраните изображение луны в папку `images` используя редактор `Gimp` (меню `Изображение \ Размер изображения` и измените размеры на `384 x 384`, название `moon.png`)
+4. Скачайте шрифт `Roboto_Black.ttf` из `fonts.google.com` и сохраните его в папку `fonts`
+5. Загрузите спрайты и шрифт
 ```
 # Загрузка спрайтов птички и веточки
 rocket_img = pygame.image.load('images/rocket.png')
 moon_img = pygame.image.load('images/moon.png')
 myfont = pygame.font.Font('fonts/Roboto-Black.ttf', 40)
-text_surface = myfont.render('You win!', False,'Red')
+text_surface = myfont.render('Есть контакт!', True, 'Red', 'White')
 ```
