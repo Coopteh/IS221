@@ -94,3 +94,28 @@ moon_img = pygame.image.load('images/moon.png')
 myfont = pygame.font.Font('fonts/Roboto-Black.ttf', 40)
 text_surface = myfont.render('Есть контакт!', True, 'Red', 'White')
 ```
+6. Задайте заливку `screen.fill((5, 2, 19))`
+7. Отображение спрайтов
+```
+    screen.blit(moon_img, (moon_x, moon_y))
+    screen.blit(rocket_img, (x, y))
+```
+8. Начальные координаты для анимации
+```
+x = 30
+y = 30
+speed = 10
+moon_x = screen_width // 2 - 200
+moon_y = screen_height - 192
+rocket_w = 128
+rocket_h = 128
+moon_w = 384
+moon_h = 384
+```
+9. Определите контакт ракеты и луны
+```
+    if (x+rocket_w/2) > moon_x and (y+rocket_h) > moon_y:
+        screen.blit(text_surface, (screen_width // 2 -100, screen_height // 2) )
+
+    pygame.display.flip()  # Обновление экрана
+```
