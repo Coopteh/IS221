@@ -96,3 +96,49 @@ def check_result():
             return "<center><h2>Неверный ответ..</h2></center>"
     return "Error"
 ```
+<hr>
+
+### Задание 5. Использование шаблона Jinja2
+
+1. Создайте папку `templates` и в ней файл `qa.html`
+2. Скопируйте и вставьте следующее содержимое в файл:
+```
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ ??? }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <div class="row mt-5 mb-3">
+    <div class="col">
+
+        <h3>{{  ???  }}</h3>
+
+        <ol>
+        {% for ... %}
+            <li>{{ ... }}</li>
+        {% endfor %}
+        </ol>
+
+        <form action="/result" method="POST">
+            <label for="result">Введите номер ответа:</label>
+            <input id="result" name="result">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+```
+3. Укажите вместо `???` и `...` правильные значения передаваемых параметров `question` и `mylist`
+4. Добавьте вызов шаблона в функцию `get_qa()`
+```
+def get_qa():
+    return render_template('qa.html',
+                           question=qa_dict['question'],
+                           mylist=list_answers)
+```
