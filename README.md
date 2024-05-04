@@ -1,4 +1,4 @@
-### Задание 1. Получить ответ от Чак Нориса
+### Задание 1. Получить ответ от Чак Норриса
 
 Откройте `pyCharm` и создайте новый файл `chuck.py`  
 URL [https://api.chucknorris.io/](https://api.chucknorris.io/jokes/random)   
