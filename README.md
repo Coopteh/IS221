@@ -9,7 +9,7 @@ URL [https://api.chucknorris.io/](https://api.chucknorris.io/jokes/random)
 получите ответ и выведите в консоль result.text и result.status_code
 ```
 
-### Задание 1. Оформим через класс и сделаем проверки
+### Задание 2. Оформим через класс и сделаем проверки
 
 Учебное видео (2): [Автоматизация на Python для начинающих с нуля. 2 урок](https://www.youtube.com/watch?v=deWtCq9Kz5g&list=PLbuh2pN46AEtSlQdsVn4krLki8Cte7x1S&index=2)  
 ```
