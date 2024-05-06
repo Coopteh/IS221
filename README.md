@@ -8,6 +8,7 @@ URL [https://api.chucknorris.io/](https://api.chucknorris.io/jokes/random)
 сделайте GET-запрос по указанному выше урл
 получите ответ и выведите в консоль result.text и result.status_code
 ```
+<hr>
 
 ### Задание 2. Оформим через класс и сделаем проверки
 
