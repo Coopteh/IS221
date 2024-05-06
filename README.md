@@ -18,8 +18,13 @@ URL [https://api.chucknorris.io/](https://api.chucknorris.io/jokes/random)
 и поместите код с предыдущего занятия в метод
 def test_create_random_joke(self):
 
+Создайте объект и вызовите метод
+joke = Test_new_joke()
+joke.test_create_random_joke()
+
 Сохраните ответ в json формате в переменную check
 check = result.json()
+
 Проверьте есть ли строка "Norris" в поле "value" указанного объекта
 получить значение можно через check.get('value')
 ```
