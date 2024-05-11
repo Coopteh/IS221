@@ -1,4 +1,4 @@
-## Создание базы данных для хранения результатов анкетирования
+![изображение](https://github.com/Coopteh/IS221/assets/156899971/b99a247d-772f-4af0-9bad-7eff0d134fad)## Создание базы данных для хранения результатов анкетирования
 
 ### Задание 1. - Создание таблиц для хранения формы опроса
 
@@ -134,58 +134,55 @@ created - '2024-04-24 10:00:00'
 ('n_student','q_id', 'name') - (2, 'Работа')
 ('n_student','q_id', 'name') - (1, '')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
-Нет			Работа			Разработчик сайтов
-![изображение](https://github.com/Coopteh/IS221/assets/156899971/b06240f2-6701-41fb-a9d6-de20ccb46e7a)
+('n_student','q_id', 'name') - (1, 'Нет')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Разработчик сайтов (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Нет')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Не знаю')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Да')
+('n_student','q_id', 'name') - (2, 'Вуз')
+('n_student','q_id', 'name') - (1, 'Веб-дизайн или программирование (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Затрудняюсь')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Не знаю')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Затрудняюсь')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Врач')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Нет')
+('n_student','q_id', 'name') - (2, 'Затрудняюсь')
+('n_student','q_id', 'name') - (1, 'Не знаю')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Нет')
+('n_student','q_id', 'name') - (2, 'Работа, Служба')
+('n_student','q_id', 'name') - (1, 'Разработчик сайтов (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Да')
+('n_student','q_id', 'name') - (2, 'Вуз, Работа')
+('n_student','q_id', 'name') - (1, 'Веб-дизайнер (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Да')
+('n_student','q_id', 'name') - (2, 'Вуз')
+('n_student','q_id', 'name') - (1, 'Веб-разработка, Системный администратор (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Да')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Веб-разработчик (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Затрудняюсь')
+('n_student','q_id', 'name') - (2, 'Затрудняюсь')
+('n_student','q_id', 'name') - (1, 'Геймдизайнер (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (1, 'Затрудняюсь')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Программист (ИТ)')
 
-('n_student','q_id', 'name') - (1, '')
-('n_student','q_id', 'name') - (2, '')
-('n_student','q_id', 'name') - (1, '')
-
+('n_student','q_id', 'name') - (1, 'Да')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'ИТ продолжить (ИТ)')
 ```
