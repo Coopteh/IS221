@@ -77,13 +77,16 @@ name VARCHAR(100)
 Поля (Columns):
 a_id INT PK NN AI
 q_id INT
+n_student INT
 name VARCHAR(100)
 
 Это описание вариантов ответов на вопросы (q_id) анкеты как сущности содержащей описание конкретного варианта ответа
+одного студента (n_student)
 
 Пример:
 1 (a_id)
 2 (q_id)
+1 (n_student)
 'Да' (name)
 ```
 6. Свяжите таблицу `Answers` с таблицей `Questions`
@@ -92,4 +95,97 @@ name VARCHAR(100)
 
 ### Задание 2. - Подготовка запросов на вставку данных
 
-Необходимо заполнить 
+Необходимо заполнить форму опроса, состоящего из 3 вопросов (2 с вариантами ответов, 1 без вариантов - открытый вопрос)  
+Запрос на вставку данных имеет вид:
+```
+USE <база данных>;
+INSERT INTO <таблица> (name) VALUES ('Значение')
+```
+1. Добавить в таблицу Pools 1 запись
+```
+name - 'Опрос по профориентации для ИС-ов ККТ (весна 2024)'
+created - '2024-04-24 10:00:00'
+```
+2. Добавить в таблицу Questions 3 записи (3 вопроса)
+```
+('p_id', 'name') - (1, 'Определились ли вы с выбором бущдущей профессии?')
+('p_id', 'name') - (1, 'Чем бы вы хотели заняться после окончания техникума?')
+('p_id', 'name') - (1, 'Какую профессию вы намерены освоить после окончания?')
+```
+3. Добавить в таблицу Options
+```
+('q_id', 'name') - (1, 'Да')
+('q_id', 'name') - (1, 'Нет')
+('q_id', 'name') - (1, 'Затрудняюсь ответить')
+
+('q_id', 'name') - (2, 'Обучаться в вузе')
+('q_id', 'name') - (2, 'Работать')
+('q_id', 'name') - (2, 'Служить в армии')
+('q_id', 'name') - (2, 'Ничем не хочу заниматься')
+('q_id', 'name') - (2, 'Затрудняюсь ответить')
+```
+4. Добавить в таблицу Answers
+```
+('n_student','q_id', 'name') - (1, 'Да')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, 'Программист, Криптомайнинг (ИТ)')
+
+('n_student','q_id', 'name') - (1, 'Нет')
+('n_student','q_id', 'name') - (2, 'Работа')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+Нет			Работа			Разработчик сайтов
+![изображение](https://github.com/Coopteh/IS221/assets/156899971/b06240f2-6701-41fb-a9d6-de20ccb46e7a)
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+('n_student','q_id', 'name') - (1, '')
+('n_student','q_id', 'name') - (2, '')
+('n_student','q_id', 'name') - (1, '')
+
+```
