@@ -23,6 +23,7 @@ db_name = "AnketaDB-IS221"
 и запустите установку библиотеки pymysql через менеджер пакетов pip
 pip install pymysql
 ```
+5. Запустите сервер СУБД mySQL через `XAMPP Control panel` - нажмите кнопку `start` для Apache, mySql
 5. Запустите на выполнение файл `main.py`
 ```
 successfully connected...
