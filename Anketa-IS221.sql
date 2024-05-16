@@ -37,7 +37,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `AnketaDB-IS221`.`Questions` ;
 
 CREATE TABLE IF NOT EXISTS `AnketaDB-IS221`.`Questions` (
-  `q_id` INT NOT NULL,
+  `q_id` INT NOT NULL AUTO_INCREMENT,
   `p_id` INT NULL,
   `name` VARCHAR(200) NULL,
   `short_name` VARCHAR(50) NULL,
