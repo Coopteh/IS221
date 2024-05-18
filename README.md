@@ -35,4 +35,11 @@ successfully connected...
 ### Задание 2. Подключиться к БД Grade-IS211
 
 Подключитесь к БД Grade-IS211 и введите запрос на вычисление среднего значения из задания 
-[db-code-04-grades](https://github.com/Coopteh/IS221/tree/db-code-04-grades)
+[db-code-04-grades](https://github.com/Coopteh/IS221/tree/db-code-04-grades)  
+Запустите на выполнение файл `main.py`, вы должны получить следующий результат:
+```
+####################
+{'name': 'Иван', 'subject': 'Информатика', 'avg_grade': Decimal('4.5000')}
+{'name': 'Иван', 'subject': 'Математика', 'avg_grade': Decimal('4.0000')}
+####################
+```
