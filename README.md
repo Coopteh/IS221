@@ -17,7 +17,7 @@ vendor/
 git add .
 git status
 git commit -m "first commit"
-git remote add origin https://github.com/<ваш аккаунт>/is221.git
+git remote add origin git@github.com:<ваш аккаунт>/is221.git
 git push --set-upstream origin master
 ```
 Вы должны увидеть свои файлы в репозитории `is221` на github.com  
