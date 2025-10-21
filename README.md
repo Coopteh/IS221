@@ -9,6 +9,7 @@ pip install -U langchain-community
 pip install gigachain
 pip install gigachain-cli
 ```
+* В случаях проблем с установкой библиотек в pyCharm - попробуйте https://colab.research.google.com/  
 
 Сам пример на python
 ```
