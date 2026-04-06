@@ -6,6 +6,7 @@
 2.	Запустите 'cmd' в папке 'c:/xampp/mysql/bin', в открывшейся командной строке запустите:
 mysql -u root -p
 3.	В интерактивном режиме создайте пользователя 'admin_user'@'localhost' в базе данных exam01 c паролем 'admin'.
+CREATE USER 'admin_user'@'localhost' IDENTIFIED BY 'admin';
 Назначьте ему все права на все таблицы базы данных exam01, предоставив права на любые операции с базой данных.
 GRANT ALL PRIVILEGES ON exam01.* TO 'admin_user'@'localhost';
 4.	Закончите сеанс под root-пользователем, запустив команду exit
